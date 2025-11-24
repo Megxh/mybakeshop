@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floretyre — Heartfelt Madeleines</title>
-
-    <!-- Soft, calming fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Floretlye — Madeleines for Gentle Days</title>
@@ -79,14 +69,14 @@
       text-transform: uppercase;
     }
 
-    nav a {
+    .nav-links a {
       margin-left: 1.2rem;
       text-decoration: none;
       color: var(--text-soft);
       font-size: 0.95rem;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: var(--text-main);
     }
 
@@ -158,6 +148,18 @@
     .note {
       font-size: 0.85rem;
       color: var(--text-soft);
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      min-height: 220px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #fbeff4, #cde4db);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-soft);
+      font-size: 0.9rem;
     }
 
     /* SECTIONS */
@@ -256,7 +258,11 @@
 
     /* RESPONSIVE */
     @media (max-width: 800px) {
-      nav {
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
         display: none; /* keep it simple for now */
       }
 
@@ -275,47 +281,153 @@
   </style>
 </head>
 
-</head>
-
 <body>
-
-<header>
-    <div class="brand">Floretyre</div>
-    <div class="tagline">A gentle pause for your heart</div>
-</header>
-
-<section class="section">
-    <h2>Our Madeleine Collection</h2>
-
-    <p>Created to bring calm, comfort, and a small moment of sweetness to your day.</p>
-
-    <!-- Red Date -->
-    <div class="flavor-card">
-        <div class="flavor-title">Red Date</div>
-        <p>Soft, mellow sweetness with warm floral notes.  
-        Known in traditional remedies to gently support mood balance and improve sleep quality.</p>
+  <header>
+    <div class="container nav">
+      <div class="logo">Floretlye</div>
+      <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order">Order</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Longan Rose -->
-    <div class="flavor-card">
-        <div class="flavor-title">Longan Rose</div>
-        <p>A soothing blend that brings emotional comfort.  
-        Longan calms the heart, while rose helps ease tension and quiet anxious thoughts.</p>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Calming madeleines for gentle days</p>
+          <h1>A gentle pause for your heart.</h1>
+          <p class="hero-sub">
+            Soft, mood-soothing madeleines baked in small batches with
+            flavours inspired by warm teas, quiet moments and softer days.
+          </p>
+          <div class="hero-actions">
+            <a href="#order" class="btn-primary">Order a box of 8</a>
+            <a href="#menu" class="btn-ghost">View flavours</a>
+          </div>
+          <p class="note">Self-collection in Singapore • Preservative-free</p>
+        </div>
+        <div>
+          <div class="hero-image-placeholder">
+            Your madeleine photo can go here later ♡
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2>Flavours crafted for comfort</h2>
+        <p class="section-sub">
+          Each flavour is designed to gently support your mood, ease the day,
+          or simply bring you a small moment of sweetness.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Red Date</h3>
+            <p class="tag">Soft mood • Restful nights</p>
+            <p>
+              Lightly sweet and comforting, inspired by red date tea.
+              Traditionally used to gently support mood balance and help
+              with sleep quality.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Longan Rose</h3>
+            <p class="tag">Calm • Anxiety-soothing</p>
+            <p>
+              Warm longan and gentle rose to ease tension, calm the heart,
+              and invite a slower, softer kind of day.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Earl Grey Chocolate</h3>
+            <p class="tag">Indulgent • Cozy treat</p>
+            <p>
+              Fragrant earl grey folded into chocolate – made simply for joy,
+              comfort and a little bit of decadent sweetness.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section section-soft" id="story">
+      <div class="container">
+        <h2>From the baker</h2>
+        <p class="section-sub">
+          Floretlye began from a quiet wish: to make everyday life feel a little gentler.
+        </p>
+        <p style="margin-top: 0.7rem; color: var(--text-soft); max-width: 40rem;">
+          These madeleines are baked in small batches with flavours inspired by warm teas,
+          soft evenings and slow mornings. Each box is meant to be a pause in your day –
+          a reminder to breathe, slow down, and treat your heart kindly.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+          <h3>How long do the madeleines last?</h3>
+          <p>
+            As they’re freshly baked with no preservatives, they’re best enjoyed within
+            3 days at room temperature. To keep them fresh for up to 7 days, store them
+            in the fridge in an airtight container.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Where do I collect my order?</h3>
+          <p>
+            Self-collection is available at Serangoon MRT (Exit G), or at your preferred
+            MRT station with a small additional fee. Full details will be sent in your
+            confirmation email.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section class="section section-soft" id="order">
+      <div class="container">
+        <div class="order-box">
+          <h2>Ready to order?</h2>
+          <p style="color: var(--text-soft); margin-top: 0.4rem;">
+            Click below to place your order through our Cococart page. You can choose
+            a mixed box or a single flavour box of 8.
+          </p>
+          <a
+            href="#"
+            class="btn-primary"
+          >
+            Go to order form
+          </a>
+          <p style="margin-top: 0.7rem; font-size: 0.85rem; color: var(--text-soft);">
+            (We’ll update this link with the exact order page soon.)
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p>© Floretlye • Small-batch madeleines for gentle hearts</p>
+      <p>Instagram: @yourhandle</p>
     </div>
-
-    <!-- Earl Grey Chocolate -->
-    <div class="flavor-card">
-        <div class="flavor-title">Earl Grey Chocolate</div>
-        <p>For pure indulgence.  
-        A comforting blend of bergamot tea and creamy chocolate for moments when you simply deserve something delicious.</p>
-    </div>
-
-    <a class="order-btn" href="#">Order a Box</a>
-</section>
-
-<footer>
-    Made with warmth in Singapore · © Floretyre
-</footer>
-
+  </footer>
 </body>
 </html>
